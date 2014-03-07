@@ -28,6 +28,8 @@ html,
 body {
   height: 100%;
   background: url('http://cdn.c.photoshelter.com/img-get/I0000bTBYOP.ZR8Y/s/750/750/fog-trail.jpg');
+  background-size: cover;
+  background-position: center;
 }
 body {
   color: #fff;
