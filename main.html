@@ -41,10 +41,10 @@
         </div>
         <div class="collapse navbar-collapse" style="float: right;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#problem">Problem</a></li>
             <li><a href="#solution">Solution</a></li>
-            <li><a href="#team">Team</a></li>
+            <!--<li><a href="#team">Team</a></li>-->
           </ul>
         </div>
         <!--<div class="navbar-collapse collapse">
@@ -72,7 +72,7 @@
       ">
       <div class="container" style="color: #dcdcdc; text-align: center;">
         <h1 style="font-size: 40px; padding-bottom: 15px;">#VirtualRealityMountainBiking</h1>
-        <p>Get ready for the most exciting cardiovascular experience ever.</p>
+        <p>Get ready for the most exciting cardio experience ever.</p>
         <!--<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>-->
       </div>
     </div>
@@ -99,7 +99,8 @@
         </div>
       </div>
     </div>
-    <div style="border-bottom: 1px #444444;  padding-top: 50px; padding-bottom: 100px;" id="solution">
+    <div style="border-bottom: 1px #444444;  padding-top: 50px; padding-bottom: 100px;
+    background: url('tweed.png'); color: #dcdcdc;" id="solution">
       <div class="container" >
         <!-- Example row of columns -->
         <div class="row">
@@ -108,12 +109,29 @@
           </div>
           <div class="col-md-8" >
             <h2 style="text-align: center;padding-bottom: 30px;">Our Solution</h2>
-            <p>In today's hectic world, keeping active and healthy is increasingly difficult. With minimal time to engage 
-            in fun and exciting sports that drive the motivation to stay fit, many people resort to the confined and 
-            boring gym.</p>
-            <p>While fun ways to exercise exist, they often come with their own restrictions. They are often seasonal 
-            and dangerous, and hence are not ideal. We seek to create a cardiovascular exercise experience that is 
-            exciting, safe and accessible. </p>
+            <p>We have designed a virtual reality mountain bike simulator. Users can sit on our custom made rig, put on 
+            an Oculus Rift and explore virtual mountain bike trails. There are four major components to our system, as
+            described below.</p>
+            <p>Our <strong><em>mechanical rig</em></strong> has been designed to be sturdy and handle all the needed loads. Made
+              with machined steel, the base has the necessary truss support to bear the load of the bike and heavy person.
+              A modifed bike is attached to with a pivot at the back, and we use a combination center of gravity and a
+              a motor to provide the necessary stability. We have also included hard stops to ensure that users remain safe.
+            </p>
+            <p>The  <strong><em>pivot system</em></strong> provides the major haptic feedback required for the project to 
+            provide a unique exciting experience. We use a 24V power supply and a Jaguar controller to drive a motor with
+            a 500:1 speed reduction ratio to control the angle of the bike. We employ a PID control scheme to ensure we 
+            are following the angles set by our physics engine.
+            </p>
+            <p>The  <strong><em>pedal resistance system</em></strong> helps make our system feel realistic to the user. By
+            giving us the ability to increase or decrease the resistance provided to the user for pedalling. This is done
+            by controlling the PWM duty cycle we pass through our custom controler to our 48V 1000W motor. We have also
+            included a flywheel geared and chained to simulate the inertia associated with starting and rolling with a bike.
+            </p>
+            <p>The final part of our system is the <strong><em>virtual environment</em></strong>. Developed with Unity, our
+            levels allow the users to explore fantastic worlds resplendant with natural features. We read information from 
+            sensors on the bike to control the in-game model, which in turn passes parameters through our physics engine to 
+            our actuators on the rig.
+            </p>
             </div>
           <div class="col-md-2">
             
@@ -121,9 +139,8 @@
         </div>
       </div>
     </div>
-    <div style="border-bottom: 1px #444444;  padding-top: 50px; padding-bottom: 100px;" id="team">
+    <!--<div style="border-bottom: 1px #444444;  padding-top: 50px; padding-bottom: 100px;  background: url('greyzz.png');" id="team">
       <div class="container" >
-        <!-- Example row of columns -->
         <h2 style="text-align: center; ">Dream Team</h2>
         <div class="row">
           <div class="col-md-3">
@@ -144,11 +161,6 @@
         </div>
       </div>
     </div>
-    <div class="container" >
-      <footer>
-        <p>&copy; Cyculus 2014</p>
-      </footer>
-    </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
